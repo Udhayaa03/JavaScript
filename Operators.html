@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+
+<!-- -----------------------------------------------------------------------------------------------
+                            Arithmetic operators enna pannum? 
+
+                Numbers (literal ah irundhaalum sari, variable ah irundhaalum sari) eduthu plus, minus,    
+                multiply, divide pannitu answer kudukkum 🤝 
+
+                                        Operator	Description
+                                        +	        Addition
+                                        -	        Subtraction
+                                        *	        Multiplication
+                                        **	        Exponentiation 
+                                        /	        Division
+                                        %	        Modulus (Remainder)
+                                        ++	        Increment
+                                        --	        Decrement 
+    -------------------------------------------------------------------------------------------------------------->
+
+<h2 style="text-align: center; color: brown;">Arithmetic Operators</h2><hr>
+<h4 id="add"></h4>
+<script>
+    let a = 5;
+    let b = 3;
+    let c = a + b; // Addition operator(Serkkalam)
+    document.getElementById("add").innerHTML = "Addition: " + a + " + " + b + " = " + c;
+</script>
+
+
+<h4 id="sub"></h4>
+<script>
+    let d = 10;
+    let e = 4;
+    let f = d - e; // Subtraction operator(koraikalam)
+    document.getElementById("sub").innerHTML = "Subtraction: " + d + " - " + e + " = " + f;
+</script>
+
+<h4 id="mul"></h4>
+<script>
+    let g = 6;
+    let h = 7;
+    let i = g * h; // Multiplication operator(Mass ah multiply pannalam!)
+    document.getElementById("mul").innerHTML = "Multiplication: " + g + " * " + h + " = " + i;
+</script>
+
+<h4 id="div"></h4>
+<script>
+    let j = 20;
+    let k = 5;
+    let l = j / k; // Division operator(Share pannalam) -returns quotient as output
+    document.getElementById("div").innerHTML = "Division: " + j + " / " + k + " = " + l;
+</script>
+
+<h4 id="mod"></h4>
+<script>
+    let m = 10;
+    let n = 3;
+    let o = m % n; // Modulus operator - returns remainder as output
+    document.getElementById("mod").innerHTML = "Modulus: " + m + " % " + n + " = " + o;
+</script>
+
+<h4 id="exp"></h4>
+<script>
+    let p = 2;
+    let q = 3;
+    let r = p ** q; // Exponentiation operator(Thirumanaalam) - raises the base to the exponent power
+    document.getElementById("exp").innerHTML = "Exponentiation: " + p + " ** " + q + " = " + r;
+</script>
+<br><hr>
+
+
+<!-- --------------------------------------------------------------------------------------------------------------
+                            Assignment operators enna pannum?
+                            
+                        Value ah eduthu variable-ku assign pannum
+
+
+                        Operator	Example	        Same As	        Result
+                            =	      x = y	          x = y	        x = 5
+                            +=	      x += y	      x = x + y	    x = 15
+                            -=	      x -= y	      x = x - y	    x = 5
+                            *=	      x *= y	      x = x * y	    x = 50
+                            **=	      x **= y	      x = x ** y	x = 100000
+                            /=	      x /= y	      x = x / y	    x = 2
+                            %=	       x %= y	      x = x % y	    x = 0
+                            :	      x: 45	          size.x = 45	x = 45
+    --------------------------------------------------------------------------------------------------------------- -->
+
+    <h2 style="text-align: center; color: brown;">Assignment Operators</h2>
+<h4 id="eq"></h4>
+<script>
+    let x = 10;
+    document.getElementById("eq").innerHTML = "Assignment: x = 10; x is " + x;
+</script>
+
+<h4 id="add_eq"></h4>
+<script>
+    let y = 5;
+    y += 10; // Equivalent to y = y + 10
+    document.getElementById("add_eq").innerHTML = "Addition Assignment: y=5; y += 10; y is " + y;
+</script>
+
+<h4 id="sub_eq"></h4>
+<script>
+    let z = 20;
+    z -= 5; // Equivalent to z = z - 5
+    document.getElementById("sub_eq").innerHTML = "Subtraction Assignment: z=20; z -= 5; z is " + z;
+</script>
+
+<h4 id="mul_eq"></h4>
+<script>
+    let a1 = 4;
+    a1 *= 3; // Equivalent to a1 = a1 * 3
+    document.getElementById("mul_eq").innerHTML = "Multiplication Assignment: a1=4; a1 *= 3; a1 is " + a1;
+</script>
+
+<h4 id="div_eq"></h4>
+<script>
+    let b1 = 16;
+    b1 /= 4; // Equivalent to b1 = b1 / 4
+    document.getElementById("div_eq").innerHTML = "Division Assignment: b1=16; b1 /= 4; b1 is " + b1;
+</script>
+
+<h4 id="mod_eq"></h4>
+<script>
+    let c1 = 10;
+    c1 %= 3; // Equivalent to c1 = c1 % 3
+    document.getElementById("mod_eq").innerHTML = "Modulus Assignment: c1=10; c1 %= 3; c1 is " + c1;
+</script>
+
+<h4 id="exp_eq"></h4>
+<script>
+    let d1 = 2;
+    d1 **= 4; // Equivalent to d1 = d1 ** 4
+    document.getElementById("exp_eq").innerHTML = "Exponentiation Assignment: d1=2; d1 **= 4; d1 is " + d1;
+</script>
+<br>
+<hr>
+
+<!-- ------------------------------------------------------------------------------------------------------------
+                            Comparison operators enna pannum?
+        
+                            Rendu values ah eduthu compare pannum.. verdict mattum kudukkum .. true illa false
+
+                            Operator	Description
+
+                                ==        Rendu perum value-la same-aa? Type paakathu ! 🤔
+                                ===       Value same-aa? Type same-aa? Rendum venum da! 😤
+                                !=        Nee vera, naan vera-aa? 😜
+                                !==       Value illa type illa… edhu different-aa irundhaalum podhum! 😎
+                                >         Yaaru periya aalu? 💪
+                                <         Yaaru chinna paiyan? 🐣
+                                >=        Periya aalu illa atleast equal-aa irukkanum! 🤝            
+                                <=        Chinna paiyan illa same-aa irundhaalum ok!
+    --------------------------------------------------------------------------------------------------------------->
+
+<h2 style="text-align: center; color: brown;">Comparison Operators</h2>
+<h4 id="eq_to"></h4>
+<script>
+    let e1 = 5;
+    let f1 = 5; //equal aah iruntha true nu return pannum otherwise false
+    document.getElementById("eq_to").innerHTML = "Equal to (5 == 5): " + (e1 == f1);
+</script>
+
+<h4 id="strict_eq"></h4>
+<script>
+    let g1 = 10;
+    let h1 = "10"; //value um type um same ah iruntha true nu return pannum otherwise false
+    document.getElementById("strict_eq").innerHTML = "Strict Equal to (10 === '10'): " + (g1 === h1);
+</script>
+
+<h4 id="not_eq"></h4>
+<script>
+    let i1 = 7;
+    let j1 = 10; //value same ah illa na true nu return pannum otherwise false
+    document.getElementById("not_eq").innerHTML = "Not Equal to (7 != 10): " + (i1 != j1);  
+</script>
+
+<h4 id="strict_not_eq"></h4>
+<script>
+    let k1 = 15;
+    let l1 = "15"; //value illa type illa edhuvum same ah illa na true nu return pannum otherwise false
+    document.getElementById("strict_not_eq").innerHTML = "Strict Not Equal to (15 !== '15'): " + (k1 !== l1);
+</script>
+
+<h4 id="greater"></h4>
+<script>
+    let m1 = 20;
+    let n1 = 15; //periya aala iruntha true nu return pannum otherwise false
+    document.getElementById("greater").innerHTML = "Greater than (20 > 15): " + (m1 > n1);
+</script>
+
+<h4 id="less"></h4>
+<script>
+    let o1 = 8;
+    let p1 = 12; //chinna aala iruntha true nu return pannum otherwise false
+    document.getElementById("less").innerHTML = "Less than (8 < 12): " + (o1 < p1);
+</script>
+
+<h4 id="greater_eq"></h4>
+<script>
+    let q1 = 10;
+    let r1 = 10; //periya aala irukanum illa atleast equal aa iruntha true nu return pannum otherwise false
+    document.getElementById("greater_eq").innerHTML = "Greater than or Equal to (10 >= 10): " + (q1 >= r1);
+</script>
+
+<h4 id="less_eq"></h4>
+<script>
+    let s1 = 5;
+    let t1 = 10; //chinna aala irukanum illa same aa iruntha true nu return pannum otherwise false
+    document.getElementById("less_eq").innerHTML = "Less than or Equal to (5 <= 10): " + (s1 <= t1);
+</script>
+<br><hr>
+
+<br><br><br>
+</body>
+</html>
