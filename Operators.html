@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operators</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="container">
 <!-- -----------------------------------------------------------------------------------------------
                             Arithmetic operators enna pannum? 
 
@@ -24,6 +25,7 @@
                                         --	        Decrement 
     -------------------------------------------------------------------------------------------------------------->
 
+    <div class="box">
 <h2 style="text-align: center; color: brown;">Arithmetic Operators</h2><hr>
 <h4 id="add"></h4>
 <script>
@@ -73,7 +75,7 @@
     let r = p ** q; // Exponentiation operator(Thirumanaalam) - raises the base to the exponent power
     document.getElementById("exp").innerHTML = "Exponentiation: " + p + " ** " + q + " = " + r;
 </script>
-<br><hr>
+</div>
 
 
 <!-- --------------------------------------------------------------------------------------------------------------
@@ -93,7 +95,8 @@
                             :	      x: 45	          size.x = 45	x = 45
     --------------------------------------------------------------------------------------------------------------- -->
 
-    <h2 style="text-align: center; color: brown;">Assignment Operators</h2>
+<div class="box">
+    <h2 style="text-align: center; color: brown;">Assignment Operators</h2><hr>
 <h4 id="eq"></h4>
 <script>
     let x = 10;
@@ -141,8 +144,7 @@
     d1 **= 4; // Equivalent to d1 = d1 ** 4
     document.getElementById("exp_eq").innerHTML = "Exponentiation Assignment: d1=2; d1 **= 4; d1 is " + d1;
 </script>
-<br>
-<hr>
+</div>
 
 <!-- ------------------------------------------------------------------------------------------------------------
                             Comparison operators enna pannum?
@@ -161,7 +163,8 @@
                                 <=        Chinna paiyan illa same-aa irundhaalum ok!
     --------------------------------------------------------------------------------------------------------------->
 
-<h2 style="text-align: center; color: brown;">Comparison Operators</h2>
+<div class="box">
+<h2 style="text-align: center; color: brown;">Comparison Operators</h2><hr>
 <h4 id="eq_to"></h4>
 <script>
     let e1 = 5;
@@ -217,8 +220,8 @@
     let t1 = 10; //chinna aala irukanum illa same aa iruntha true nu return pannum otherwise false
     document.getElementById("less_eq").innerHTML = "Less than or Equal to (5 <= 10): " + (s1 <= t1);
 </script>
-<br><hr>
+</div>
 
-<br><br><br>
+</div>
 </body>
 </html>
