@@ -63,6 +63,24 @@
     <button onclick="checkEvenOdd()">Click Panni number enter pannu</button>
   </div>
 
+
+  <!-- Boolean -->
+   <div class="box">
+    <h3>Boolean</h3>
+    <p>True or False?</p>
+    <button onclick="checkTrueFalse()">2 ==='2'</button>
+    <button onclick="checkTrueFalse1()">2 =='2'</button>
+  </div>
+
+  <!-- Logical Operators -->
+   <div class="box">
+    <h3>Logical Operators</h3>
+    <p>True or False?<br>x=6;</p>
+    <button onclick="logicaland()"> (x<10 && x>5)</button>
+    <button onclick="logicaland1()"> (x>10 && x>5)</button>
+    <button onclick="logicalor()"> (x<10 || x>5)</button>
+    <button onclick="logicalor1()"> (x>10 || x>5)</button>
+  </div>
 </div>
 
 <script>
@@ -95,6 +113,40 @@
   function checkEvenOdd() {
     let number = prompt("Oru number sollu:");
     let result = (number % 2 === 0) ? "Even da!" : "Odd da!";
+    alert( result);
+  }
+
+  function checkTrueFalse() {
+    let result = (2 === '2') ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function checkTrueFalse1() {
+    let result = (2 == '2') ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicaland() {
+    let x = 6;
+    let result = (x < 10 && x > 5) ? "True da!" : "False da!";
+    alert( result);
+  } 
+
+  function logicaland1() {
+    let x = 6;
+    let result = (x > 10 && x > 5) ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicalor() {
+    let x = 6;
+    let result = (x < 10 || x > 5) ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicalor1() {
+    let x = 6;
+    let result = (x > 10 || x > 5) ? "True da!" : "False da!";
     alert( result);
   }
 </script>
