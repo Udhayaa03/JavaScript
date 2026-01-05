@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loops</title>
+</head>
+<body>
+    <h1 style="color: darkred; text-align: center;">Loops</h1>
+    <!-- for loop -->
+     <!----------------------------------------------------------------------------------- 
+                For loop =(Start point irukkum;condition irukkum;increment irukkum)
+                   condition false aagum varaikum loop run aagum
+        ---------------------------------------------------------------------------------->
+     <div class="container">
+
+     <div class="box">
+     <h2 style="color: darkblue;">For Loop </h2><hr>
+     <h3>Generate numbers from 1 to n using for loop</h3>
+     <h4 id="forloop"></h4>
+     <button onclick="showNumbersFor()">Generate</button>
+     </div>
+
+     <!-- while loop -->
+     <div class="box">
+     <h2 style="color: darkblue;">While Loop</h2><hr>
+     <h3>Generate numbers from 1 to n using while loop</h3>
+     <h4 id="whileloop"></h4>
+     <button onclick="showNumbersWhile()">Generate</button>
+     </div>
+
+     <!-- do while loop -->
+      <div class="box">
+        <h2 style="color:darkblue;">Do While Loop</h2><hr>
+        <h3>Generate numbers from 1 to n using do while loop</h3>
+        <h4 id="dowhileloop"></h4>
+        <button onclick="showNumbersDoWhile()">Generate</button>
+      </div>
+
+     <script>
+        function showNumbersFor(){
+            let num=prompt("Enter the number to generate numbers up to:");
+            text="";
+            for(let i=0;i<=num;i++)
+             {
+            text += '<h4 style="color: blue;">The Number is '+i+"</h4><br>";
+             }
+        document.getElementById('forloop').innerHTML=text;
+        }
+
+
+        function showNumbersWhile(){
+            let num=prompt("Enter the number to generate numbers up to:");
+            text="";
+            let i=0;
+            while(i<=num)
+            {
+            text += '<h4 style="color: blue;">The Number is '+i+"</h4><br>";
+            i++;
+            }
+         document.getElementById('whileloop').innerHTML=text;
+        }
+
+         function showNumbersDoWhile(){
+            let num=prompt("Enter the number to generate numbers up to:");
+            text="";
+            let i=0;
+            do{
+                text += '<h4 style="color:blue;">The Number is '+i+ "</h4><br>";
+                i++
+            }
+            while(i<=num)
+            document.getElementById('dowhileloop').innerHTML=text;
+
+         }
+       
+     </script>
+     
+
+  
+    
+    </div>
+</body>
+</html>
