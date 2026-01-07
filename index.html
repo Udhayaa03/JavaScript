@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+   
+        <div class="box">
+        <!-- Bulb on and off panna porom -->
+       
+        <h3>Click the button to turn on and off the bulb</h3><br>
+        
+        <button onclick="document.getElementById('MyImage').src='on.jpg'">Turn On</button>
+
+        <img id="MyImage" src="off.jpg" height="200px"/>
+
+        <button onclick="document.getElementById('MyImage').src='off.jpg'">Turn Off</button>
+        
+        </div>
+
+
+
+        
+
+        <div class="box">
+        <!-- font size change panna porom -->
+       
+        <br><button onclick="document.getElementById('font').style.fontSize='24px'">Increase+</button>
+
+        <h5 id="font">Click the buttons to change size </h5>
+
+        <button onclick="document.getElementById('font').style.fontSize='10px'">Decrease-</button>
+        </div>
+        
+
+
+
+        <div class="box">
+        <!-- hide and seek vilada porom -->
+
+        <h3 id="hide">Kannamoochi rae rae..!🙈</h3>
+        <button onclick="document.getElementById('hide').style.display='none'">Hide</button>
+
+        <button onclick="document.getElementById('hide').style.display='block'">Seek</button>
+        </div>
+        
+
+
+        <div class="box">
+        <!-- maathi pesurathu -->
+         <h3 id="change">Button aah thotta mariduven !!</h3>
+         <button onclick="document.getElementById('change').innerText='Maariten !!'">Thotta Maarum</button>
+         <button onclick="document.getElementById('change').innerHTML='itho ungalukaaga....Button aah thotta mariduven !! !!'">palaya padi maaru !!</button>
+         </div>
+         
+
+
+
+         <div class="box">
+        <!-- 1+1 uh 2 mama ...2+nee uhh 3 mama -->
+         <h2 >Yaaru sonnalum 1 + 1 uh (document.write)</h2>
+
+
+         <!-- <button onclick="document.write(1+1)">Ethana ???</button>    itha ipdi 👈use pana ellathaiyum delete pannirum -->
+
+
+         <script>document.write(1+1)</script> than
+         </div>
+         
+
+
+         <div class="box">
+        <!-- ipo oru alert message mathiri try panuvom -->
+         <h3> Magic ?? window.alert mesaage aa kaatum</h3>
+         <button onclick="window.alert('Vanakam da Mapla !! window.alert la irunthu')">window.alert nu koduthalum kaatum</button>
+         <button onclick="alert('Naanga mattum summava..ipdi koduthalum varuvom')">alert mattum koduthalum kaatum</button>
+                </div>
+        
+
+
+        <div class="box">
+        <!-- console la display aagum -->
+         <h3>2 + 2 Ethana ??(console.log) Right Click > inspect > Console</h3>
+         <button onclick="console.log(2+2)">Console la display aagum</button>
+         </div>
+         
+
+        <div class="box">
+        <!-- page aah full aah print poda porom -->
+         <h3>Page Full aah print aagum 👇</h3>
+         <button onclick="window.print()">Print</button></div>
+        
+
+
+        <div class="box"
+             style="border: 2px solid #c591e1;
+                    background-color: #c591e1;">
+        <h3>More +</h3>
+        <button onclick="operator()">Operators</button>
+        <button onclick="cond()">Conditional Statements</button>
+        <button onclick="loop()">Loops</button>
+        <button onclick="string()">Strings</button>
+        <button onclick="number()">Numbers</button>
+       
+        </div></div>
+    
+
+    <script>
+        function operator(){
+            window.location.href='Operators.html';
+        }
+        
+        function cond(){
+            window.location.href='ConditionalStatements.html';
+        }
+
+        function loop(){
+            window.location.href='Loops.html';
+        }
+
+        function string(){
+            window.location.href='Strings.html';
+        }   
+
+        function number(){
+            window.location.href='Numbers.html';
+        }
+    </script>
+
+
+    <br><br><br><br><br><br></body></html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Statements</title>
+
+  <style>
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .box {
+      border: 2px solid brown;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #fff7f0;
+      text-align: center;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h2 style="text-align:center; color:brown;">Conditional Statements</h2>
+<hr>
+
+<!----------------------------------------------------------------------------------------------------------------------------
+                     Conditional statements na… “Situation paathu decision edukkuradhu” 
+                     (Ithukku than conditions aah follow panunga da ..conditions aah follow pannunga da..nu sonen)
+------------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+
+  <!-- if...else -->
+  <div class="box">
+    <h3>if...else Statement</h3>
+    <p>Vote podalaama naan??</p>
+    <button onclick="checkAge()">Click Panni Age enter pannu solluren</button>
+  </div>
+
+  <!-- switch -->
+  <div class="box">
+    <h3>Switch Statement</h3>
+    <p>Weekday enna nu sollanuma ??</p>
+    <button onclick="checkDay()">Click Panni number enter pannu</button>
+  </div>
+
+  <!-- ternary -->
+  <div class="box">
+    <h3>Ternary Operator</h3>
+    <p>Even ah Odd ah?</p>
+    <button onclick="checkEvenOdd()">Click Panni number enter pannu</button>
+  </div>
+
+
+  <!-- Boolean -->
+   <div class="box">
+    <h3>Boolean</h3>
+    <p>True or False?</p>
+    <button onclick="checkTrueFalse()">2 ==='2'</button>
+    <button onclick="checkTrueFalse1()">2 =='2'</button>
+  </div>
+
+  <!-- Logical Operators -->
+   <div class="box">
+    <h3>Logical Operators</h3>
+    <p>True or False?<br>x=6;</p>
+    <button onclick="logicaland()"> (x<10 && x>5)</button>
+    <button onclick="logicaland1()"> (x>10 && x>5)</button>
+    <button onclick="logicalor()"> (x<10 || x>5)</button>
+    <button onclick="logicalor1()"> (x>10 || x>5)</button>
+  </div>
+</div>
+
+<script>
+  function checkAge() {
+    let age = prompt("Un age enna da?");
+    if (age >= 18) {
+      alert("Nee major da 😎 Vote podalaam!");
+    } else {
+      alert("Innum chinna paiyan da 👶 Wait pannu!");
+    }
+  }
+
+  function checkDay() {
+    let dayNumber = prompt("Oru number sollu (1-7):");
+    let dayName;
+    switch (dayNumber) {
+      case '1': dayName = "Sunday"; break;
+      case '2': dayName = "Monday"; break;
+      case '3': dayName = "Tuesday"; break;
+      case '4': dayName = "Wednesday"; break;
+      case '5': dayName = "Thursday"; break;
+      case '6': dayName = "Friday"; break;
+      case '7': dayName = "Saturday"; break;
+      default:
+        dayName = "Ithukku thaan padinga da padinga da nu sonnen ....oru week la 7 days than irukkum..olunga athuku ulla oru number sollu 🤦";
+    }
+    alert( dayName + " da!");
+  }
+
+  function checkEvenOdd() {
+    let number = prompt("Oru number sollu:");
+    let result = (number % 2 === 0) ? "Even da!" : "Odd da!";
+    alert( result);
+  }
+
+  function checkTrueFalse() {
+    let result = (2 === '2') ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function checkTrueFalse1() {
+    let result = (2 == '2') ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicaland() {
+    let x = 6;
+    let result = (x < 10 && x > 5) ? "True da!" : "False da!";
+    alert( result);
+  } 
+
+  function logicaland1() {
+    let x = 6;
+    let result = (x > 10 && x > 5) ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicalor() {
+    let x = 6;
+    let result = (x < 10 || x > 5) ? "True da!" : "False da!";
+    alert( result);
+  }
+
+  function logicalor1() {
+    let x = 6;
+    let result = (x > 10 || x > 5) ? "True da!" : "False da!";
+    alert( result);
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Strings</title>
+</head>
+<body>
+    <h1 style="color: darkred; text-align: center;">Strings</h1>
+
+    <div class="container">
+
+    <!-- String Length -->
+    <div class="box">
+    <h2 style="color: darkblue;">String Length</h2><hr>
+    <h3 id="length"></h3>
+     <button onclick="len()">Length Check Panni Paaru</button></div>
+
+     <!-- Uppercase & Lowercase -->
+      <div class="box">
+        <h2 style="color: darkblue;">Case Conversion</h2><hr>
+      <h3 id="case"></h3>
+        <button onclick="upper()">Uppercase</button>
+        <button onclick="lower()">Lowercase</button></div>
+
+    <!-- Interpolation -->
+        <div class="box">
+            <h2 style="color: darkblue;">String Interpolation</h2><hr>
+            <h3 id="interpolation"></h3>
+            <button onclick="interpol()">Show Interpolated String</button></div>
+
+    <!-- Concatenation using concat() -->
+     <div class="box">
+        <h2 style="color: darkblue;">String Concatenation</h2><hr>
+        <h3 id="concatenate"></h3>
+        <button onclick="concatenate()">Concatenate Strings</button></div>
+
+    <!-- Slicing using slice(start,end) -->
+     <div class="box">
+        <h2 style="color: darkblue;">String Slicing and Substring</h2><hr>
+        <h3 id="slicing"></h3>
+        <button onclick="slice()">Slice String</button>
+        <button onclick="sub()">Substring</button></div>
+
+    <!-- String Repeat -->
+     <div class="box">
+        <h2 style="color: darkblue;">String Repeat</h2><hr>
+        <h3 id="repeat"></h3>
+        <button onclick="repeat()">Repeat String</button></div>
+
+    <!-- Replacing String Content (replace and replaceall) -->
+     <div class="box">
+        <h2 style="color: darkblue;">String Replace</h2><hr>
+        <h3 id="replace"></h3>
+        <button onclick="replace()">Replace String Content</button>
+        <button onclick="replaceAll()">Replace All</button>
+     </div>
+
+     <script>
+        function len(){
+            let str=prompt("Oru string enter pannu athoda length aah solluren");
+            text="Intha string oda length :"+str.length;
+            document.getElementById('length').innerHTML=text;
+        }
+
+        function upper(){
+            let str=prompt("Oru string enter pannu atha uppercase aah solluren");
+            text="Uppercase : "+str.toUpperCase();
+            document.getElementById('case').innerHTML=text;
+        }
+
+        function lower(){
+            let str=prompt("Oru string enter pannu atha lowercase aah solluren");
+            text="Lowercase : "+str.toLowerCase();
+            document.getElementById('case').innerHTML=text;
+        }
+
+        function interpol(){
+            let name=prompt("Un peru enna??");
+            let age=prompt("Un vayasu enna??");
+            text="Koduthuruka details vachu paatha ...Un peru "+name+" and un age "+age+" ryt aah";
+            // text= `welcome, ${name}` + `! You are ${age} years old.`;
+            document.getElementById('interpolation').innerHTML=text;
+        }
+
+        function concatenate(){
+            let str1=prompt("First sting enter pannu");
+            let str2=prompt("second string enter pannu");
+            text="Concatednated string : "+str1.concat(" ",str2);
+            document.getElementById('concatenate').innerHTML=text;
+        }
+
+        function slice(){
+            let str=prompt("Oru string enter pannu");
+            let start=Number(prompt("Slice start panna vendiya index enna ??"));
+            let end=Number(prompt("slice end panna vendiya index enna ??"));
+            text="Sliced String : "+str.slice(start,end);
+            document.getElementById('slicing').innerHTML=text;
+        }
+
+        function sub(){
+            let str=prompt("Oru string enter pannu");
+            let start=Number(prompt("Substring start panna vendiya index enna ??"));
+            let end=Number(prompt("Substring end panna vendiya index enna ??"));
+            text="Substring : "+str.substring(start,end);
+            document.getElementById('slicing').innerHTML=text;
+        }
+
+        function repeat(){
+            let str=prompt("Oru string enter pannu");
+            let count=Number(prompt("Ethana vaati repeat pannanum ??"));
+            text="Repeated String : "+str.repeat(count);
+            document.getElementById('repeat').innerHTML=text;
+        }
+
+        function replace(){
+            let str=prompt("Oru string enter pannu");
+            let oldText=prompt("Entha word aah replace pannanum ?? ");
+            let newText=prompt("entha word use panni replace pannanum *First find panura word mattum than replace aagum* ??");
+            text="Replaced String : "+str.replace(oldText,newText);
+            document.getElementById('replace').innerHTML=text;
+        }
+
+        function replaceAll(){
+            let str=prompt("Oru string enter pannu");
+            let oldText=prompt("Entha word aah replace pannanum ?? ");
+            let newText=prompt("entha word use panni replace pannanum *Same words ellam replace aagum* ??");
+            text="Replaced String : "+str.replaceAll(oldText,newText);
+            document.getElementById('replace').innerHTML=text;
+        }
+     </script>
+     
+     </div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------- 
+at()	            Returns an indexed character from a string
+charAt()	        Returns the character at a specified index (position)
+charCodeAt()	    Returns the Unicode of the character at a specified index
+codePointAt()   	Returns the Unicode value at an index (position) in a string
+concat()	        Returns two or more joined strings
+constructor     	Returns the string's constructor function
+endsWith()	        Returns if a string ends with a specified value
+fromCharCode()  	Returns Unicode values as characters
+includes()	        Returns if a string contains a specified value
+indexOf()	        Returns the index (position) of the first occurrence of a value in a string
+isWellFormed()      Returns true if a string is well formed
+lastIndexOf()	    Returns the index (position) of the last occurrence of a value in a string
+length	            Returns the length of a string
+localeCompare()	    Compares two strings in the current locale
+match()	            Searches a string for a value, or a regular expression, and returns the matches
+matchAll()	        Searches a string for a value, or a regular expression, and returns the matches
+padEnd()	        Pads a string at the end
+padStart()	        Pads a string from the start
+prototype	        Allows you to add properties and methods to an object
+repeat()	        Returns a new string with a number of copies of a string
+replace()	        Searches a string for a pattern, and returns a string where the first match is replaced
+replaceAll()	    Searches a string for a pattern and returns a new string where all matches are replaced
+search()	        Searches a string for a value, or regular expression, and returns the index (position) of the match
+slice()	            Extracts a part of a string and returns a new string
+split()	            Splits a string into an array of substrings
+startsWith()    	Checks whether a string begins with specified characters
+substr()	        Deprecated. Use substring() or slice() instead.
+substring()        	Extracts characters from a string, between two specified indices (positions)
+toLocaleLowerCase()	Returns a string converted to lowercase letters, using the host's locale
+toLocaleUpperCase()	Returns a string converted to uppercase letters, using the host's locale
+toLowerCase()	    Returns a string converted to lowercase letters
+toString()	        Returns a string or a string object as a string
+toUpperCase()	    Returns a string converted to uppercase letters
+toWellFormed()      Returns a string where "lone surrogates" are replaced with the Unicode replacement character
+trim()	            Returns a string with removed whitespaces
+trimEnd()       	Returns a string with removed whitespaces from the end
+trimStart()     	Returns a string with removed whitespaces from the start
+valueOf()       	Returns the primitive value of a string or a string object
+------------------------------------------------------------------------------------------------------------------------------->
