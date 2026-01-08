@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Objects</title>
+</head>
+<body>
+    <h1 > Objects</h1>
+    <!-- key : value pairs inside curly braces -->
+    <div class="container">
+        <!-- Object creation -->
+        <div class="box">
+            <h2 style="color: darkblue;">Object Creation</h2><hr>
+            <h3 id="creation"></h3>
+            <button onclick="ObjectCreation()">Create Object</button>
+        </div>
+
+        <!-- Accessing Object Properties -->
+        <div class="box">
+            <h2 style="color: darkblue;">Accessing Object Properties</h2><hr>
+            <h3 id="access"></h3>
+            <button onclick="let car={brand:'Toyota', model:'Corolla', year:2020}; document.getElementById('access').innerHTML='Brand: '+car.brand+', Model: '+car.model+', Year: '+car.year;">Access Properties</button>
+        </div>
+
+        <!-- Modifying Object Properties -->
+        <div class="box">
+            <h2 style="color: darkblue;">Modifying Object Properties</h2><hr>
+            <h3 id="modify"></h3>
+            <button onclick="let book={title:'JavaScript Basics', author:'UDHAYAA', pages:300}; book.pages=350; document.getElementById('modify').innerHTML='Title: '+book.title+', Author: '+book.author+', Pages: '+book.pages;">Modify Properties</button>
+        </div>
+        
+        <!-- Deleting Object Properties -->
+        <div class="box">
+            <h2 style="color: darkblue;">Deleting Object Properties</h2><hr>
+            <h3 id="delete"></h3>
+            <button onclick="let laptop={brand:'Dell', model:'XPS 13', year:2021}; delete laptop.year; document.getElementById('delete').innerHTML='Brand: '+laptop.brand+', Model: '+laptop.model+', Year: '+laptop.year;">Delete Property</button>
+        </div>
+
+
+            
+       <script>
+        function ObjectCreation(){
+            let name=prompt("Enter Name:");
+            let age=prompt("Enter Age:");
+            let person={
+                name:name,
+                age:age
+            }
+            person.nationality="Indian" // Adding new property
+            // delete keyword deletes both the value of the property and the property itself.
+            
+            document.getElementById('creation').innerHTML="Name: "+ person.name +"<br> Age: "+person.age;
+        }
+
+        
+       </script>
+    </div>
+</body>
+</html>
