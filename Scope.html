@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope</h1>
+
+    <div class="container">
+        <!-- Global Scope -->
+        <div class="box">
+            <h2 style="color: darkblue;">Global Scope</h2><hr>
+            <h3 id="global"></h3>
+            <button onclick="globalVar()">Global Variable</button>
+        </div>
+
+        <!-- Function Scope -->
+         <div class="box">
+            <h2 style="color: darkblue;">Function Scope</h2><hr>
+            <h3 id="func"></h3>
+            <h3 id="func1"></h3>
+            <button onclick="funcVar()">Function Variable</button>
+         </div>
+
+        <!-- Block Scope -->
+         <div class="box">
+            <h2 style="color: darkblue;">Block Scope</h2><hr>
+            <h3 id="block"></h3>
+            <h3 id="block1"></h3>
+            <button onclick="blockVar()">Block Variable</button>
+         </div>
+
+
+        <script>
+            var globalVariable = "This one is a global variable";
+
+            function globalVar(){
+               document.getElementById("global").innerHTML = globalVariable;
+            }
+
+
+            function funcVar(){
+                var localVar= "This one is a Local Variable";
+                document.getElementById("func").innerHTML= localVar;
+            }
+            document.getElementById("func1").innerHTML= "This is accessed from outside of a function : " +typeof localVar;
+
+
+            function blockVar() {
+                if (true) {
+                    let blockVar = "This one is a Block Scoped Variable";
+                    document.getElementById("block").innerHTML = blockVar;
+                    }
+            }
+
+            // Accessing block scoped variable outside using typeof
+            document.getElementById("block1").innerHTML = "Accessing blockVar outside block: " + typeof blockVar;
+        </script>
+    
+    </div>
+</body>
+</html>
