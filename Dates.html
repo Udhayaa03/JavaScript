@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dates</title>
+</head>
+<body>
+     <h1 style="color:brown; text-align: center;">Dates</h1>
+
+    <div class="container">
+
+    <!-- new Date() -->
+    <div class="box">
+    <h2 style="color: darkblue;">Current Date and Time using "new Date()"</h2><hr>
+    <h3 id="currentDate"></h3>
+    <button onclick="showCurrentDate()">Show</button>
+    </div>
+
+    <!-- new Date(date string) -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date from Date String using "new Date(date string)"</h2><hr>
+    <h3 id="dateString"></h3>
+    <button onclick="showDatefromString()">Show</button>
+    </div>
+
+    <!-- new Date(year, month, day, hour, minute, second) -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date from Components using "new Date(year, month, ...)"</h2><hr><!--oru month kooti than kaatum-->
+    <h3 id="dateComponents"></h3>
+    <button onclick="showDatefromComponents()">Show</button>
+    </div>
+
+    <!-- new Date(milliseconds) -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date from Milliseconds using "new Date(milliseconds) Jan 1,1970 (+ or -)"</h2><hr>
+    <h3 id="dateMilliseconds"></h3>
+    <button onclick="showDatefromMilliseconds()">Show</button>
+    </div>
+
+    <!-- toDateString() -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date in String Format using "toDateString()"</h2><hr>
+    <h3 id="dateStringFormatted"></h3>
+    <button onclick="showDateStringFormatted()">Show</button>
+    </div>
+
+    <!-- toISOString -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date in ISO Format using "toISOString()"</h2><hr>
+    <h3 id="dateISOString"></h3>
+    <button onclick="showDateISOString()">Show</button>
+    </div>
+
+    <!-- toUTCString() -->
+    <div class="box">
+    <h2 style="color: darkblue;">Date in UTC Format using "toUTCString()"</h2><hr>
+    <h3 id="dateUTCString"></h3>
+    <button onclick="showDateUTCString()">Show</button>
+    </div>
+
+    <script>
+        
+        // new Date() creates a date object with the current date and time 
+        function showCurrentDate() {
+            const now = new Date();
+            document.getElementById('currentDate').innerHTML = now.toString();
+        }
+
+        // new Date(date string) creates a date object from a date string
+        function showDatefromString() {
+            var date=prompt("Enter date in this format: January 10, 2026 06:30:00");
+            const dateString= new Date(date);
+            document.getElementById('dateString').innerHTML = dateString.toString();
+        }
+
+        // new Date(year, month, day, hour, minute, second) creates a date object with a specified date and time
+        function showDatefromComponents() {
+            var year=Number(prompt("Enter year in YYYY format:"));
+            var month=Number(prompt("Enter month in MM format (0-11):"));
+            var day=Number(prompt("Enter day in DD format:"));
+            var hours=Number(prompt("Enter hours in HH format (0-23):"));
+            var minutes=Number(prompt("Enter minutes in mm format (0-59):"));
+            var seconds=Number(prompt("Enter seconds in ss format (0-59):"));
+            const dateComponents = new Date(year, month, day, hours, minutes, seconds);
+            document.getElementById('dateComponents').innerHTML = dateComponents.toString();
+        }
+
+        // new Date(milliseconds) creates a date object with the time set to the number of milliseconds since January 1, 1970
+        function showDatefromMilliseconds() {
+            var milliseconds=Number(prompt("Enter milliseconds :"));
+            const dateMilliseconds = new Date(milliseconds);
+            document.getElementById('dateMilliseconds').innerHTML = dateMilliseconds.toString();
+        }
+
+
+        // toDateString() returns the date portion of a date object as a string
+        function showDateStringFormatted() {
+            const now = new Date();
+            const dateStringFormatted = now.toDateString();
+            document.getElementById('dateStringFormatted').innerHTML = dateStringFormatted;
+        }
+
+        // toISOString() returns the date as a string in ISO format
+        function showDateISOString() {
+            const now = new Date();
+            const dateISOString = now.toISOString();
+            document.getElementById('dateISOString').innerHTML = dateISOString;
+        }
+
+        // toUTCString() converts a date to a string, using the UTC time zone
+        function showDateUTCString() {
+            const now = new Date();
+            const dateUTCString = now.toUTCString();
+            document.getElementById('dateUTCString').innerHTML = dateUTCString;
+        }
+    </script>
+    </div>
+</body>
+</html>
