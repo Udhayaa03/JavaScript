@@ -33,6 +33,19 @@
             <button onclick="blockVar()">Block Variable</button>
          </div>
 
+         <!-- Hoisting is JavaScript's default behavior of moving declarations to the top. -->
+          <div class="box">
+            <h2 style="color: darkblue;">Hoisting</h2><hr>
+            <h3 id="hoist"></h3>
+            <button onclick="hoist()">Hoisted Variable</button>
+          </div>
+
+          <!-- use strict  -->
+           <div class="box">
+            <h2 style="color: darkblue;">Use Strict</h2><hr>
+            <h3 id="strict"></h3>
+            <button onclick="Strict()">Use Strict Mode</button>
+           </div>
 
         <script>
             var globalVariable = "This one is a global variable";
@@ -58,6 +71,23 @@
 
             // Accessing block scoped variable outside using typeof
             document.getElementById("block1").innerHTML = "Accessing blockVar outside block: " + typeof blockVar;
+
+
+            // Hoisting example
+            function hoist() {
+                hoistedVar=prompt("Enter something to see hoisting in action:");
+                document.getElementById("hoist").innerHTML = hoistedVar;
+                var hoistedVar 
+            }
+
+
+            //Strict mode example
+            function Strict() {
+                 'use strict';
+                 let y;
+                 document.getElementById("strict").innerHTML = y;
+            }
+
         </script>
     
     </div>
