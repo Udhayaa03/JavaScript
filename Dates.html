@@ -60,6 +60,13 @@
     <button onclick="showDateUTCString()">Show</button>
     </div>
 
+    <!-- Date.now() Method -->
+    <div class="box">
+    <h2 style="color: darkblue;">Current Time in Milliseconds using "Date.now()"</h2><hr>
+    <h3 id="dateNow"></h3>
+    <button onclick="showDateNow()">Show</button>
+    </div>
+
     <script>
         
         // new Date() creates a date object with the current date and time 
@@ -115,7 +122,52 @@
             const dateUTCString = now.toUTCString();
             document.getElementById('dateUTCString').innerHTML = dateUTCString;
         }
+
+        // Date.now() returns the number of milliseconds since January 1, 1970.
+        function showDateNow() {
+            const dateNow = Date.now();
+            document.getElementById('dateNow').innerHTML = dateNow;
+        }
     </script>
     </div>
 </body>
 </html>
+
+
+
+
+
+                    <!------------------------------------------------------------------------
+                                                 Date Get Methods
+
+                    Method	            Description
+                    getFullYear()	    Get year as a four digit number (yyyy)
+                    getMonth()	        Get month as a number (0-11)
+                    getDate()	        Get day as a number (1-31)
+                    getDay()	        Get weekday as a number (0-6)
+                    getHours()	        Get hour (0-23)
+                    getMinutes()	    Get minute (0-59)
+                    getSeconds()	    Get second (0-59)
+                    getMilliseconds()	Get millisecond (0-999)
+                    getTime()	        Get time (milliseconds since January 1, 1970) 
+
+                    ------------------------------------------------------------------------>
+
+
+
+
+                    <!------------------------------------------------------------------------
+                                                 Date Set Methods   
+                    
+                    Method	                Description
+                    
+                    setDate()	            Set the day as a number (1-31)
+                    setFullYear()       	Set the year (yyyy)
+                    setHours()	            Set the hour (0-23)
+                    setMilliseconds()   	Set the milliseconds (0-999)
+                    setMinutes()	        Set the minutes (0-59)
+                    setMonth()	            Set the month (0-11)
+                    setSeconds()	        Set the seconds (0-59)
+                    setTime()	            Set the time (milliseconds since January 1, 1970)
+
+                    ------------------------------------------------------------------------>
