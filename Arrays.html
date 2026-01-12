@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    
+    <div class="container">
+        <!-- Array ngrathu multiple values-aah ore variable-la store panna use aagura object type.
+                Array-kulla irukkura each value-um “element” nu solluvom.
+                Array-kulla different data types store panna mudiyum
+                Namma venumna values add pannalam, remove pannalam. -->
+
+    <div class="box">
+        <h2 style="color: darkblue;">Creating an Array</h2><hr>
+        <h3 id="array"></h3>
+        <button onclick="CreateArray()">Create Array</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Accessing Array Elements</h2><hr>
+        <h3 id="accessArray"></h3>
+        <button onclick="AccessArray()">Access Array Elements</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Length of an Array</h2><hr>
+        <h3 id="lengthArray"></h3>
+        <button onclick="LengthArray()">Length</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array toString()</h2><hr>
+        <h3 id="arrayToString"></h3>
+        <button onclick="ArrayToString()"> toString()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array at()</h2><hr>
+        <h3 id="arrayAt"></h3>
+        <button onclick="ArrayAt()"> at()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array join()</h2><hr>
+        <h3 id="arrayJoin"></h3>
+        <button onclick="ArrayJoin()"> join()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array pop()</h2><hr>
+        <h3 id="arrayPop"></h3>
+        <button onclick="ArrayPop()">pop()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array push()</h2><hr>
+        <h3 id="arrayPush"></h3>
+        <button onclick="ArrayPush()">push()</button>
+    </div>
+
+    <script>
+        // creating an Array
+        function CreateArray(){
+            let fruits=prompt("Enter fruits separated by commas:");
+            fruits=fruits.split(",");
+            // let fruits=["Apple","Banana","Cherry","Mango"];  
+            // let fruits1=new Array('Apple','Banana','Cherry'); 
+            document.getElementById('array').innerHTML=fruits
+            // document.getElementById('array').innerHTML+="<br>Using new keyword: "+fruits1;
+        }
+
+        // Accessing Array Elements
+        function AccessArray(){
+            let fruits= new Array('Apple','Banana','Cherry','Mango');
+            let index=prompt("Enter the index of the fruit you want to access (0 to 3): ");
+            let fruit=fruits[index];
+            document.getElementById('accessArray').innerHTML="Array: "+fruits+"<br><br>Fruit at index "+index+" is: "+fruit;
+        }
+
+        // Length of an Array
+        function LengthArray(){
+            let fruits= new Array('Apple','Banana','Cherry','Mango','Orange','Pineapple');
+            let length=fruits.length;
+            // fruits.length=2; // to set length
+            document.getElementById('lengthArray').innerHTML="Fruits: "+fruits+"<br><br>Length of the array is: "+length;
+        }
+
+        // Array toString()
+        function ArrayToString(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let string=fruits.toString();
+            document.getElementById('arrayToString').innerHTML="Array: "+fruits+"<br><br>String: "+string; //typeof use panni paatha diff theriyum
+            
+        }
+
+        // Array at()
+        function ArrayAt(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let index=Number(prompt("Enter the index of the fruit you want to access (0 to 3): "));
+            let fruit=fruits.at(index);
+            document.getElementById('arrayAt').innerHTML="Array: "+fruits+"<br><br>Fruit at index "+index+" is: "+fruit;
+        }
+
+       /* Array join()
+        It behaves just like toString(), but in addition you can specify the separator */
+        function ArrayJoin(){
+           let fruits=new Array('Apple','Banana','Cherry','Mango');
+           let joined=fruits.join('-'); // separator as '-'
+           document.getElementById('arrayJoin').innerHTML="Array: "+fruits+"<br><br>Joined String: "+joined;
+        }
+
+      /* Array pop()
+         The pop() method removes the last element from an array*/
+        function ArrayPop(){
+           let fruits=new Array('Apple','Banana','Cherry','Mango');
+           let removed=fruits.pop();
+          document.getElementById('arrayPop').innerHTML="Array after pop(): "+fruits+"<br><br>Removed Element: "+removed;
+      }
+
+        /*Array push()
+        The push() method adds a new element to an array (at the end) */
+        function ArrayPush(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let newFruit=prompt("Enter a fruit to add to the array:");
+            fruits.push(newFruit);
+            document.getElementById('arrayPush').innerHTML="Array after push(): "+fruits;
+        }
+
+    </script>
+
+
+    </div>
+</body>
+</html>
