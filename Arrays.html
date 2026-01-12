@@ -23,44 +23,74 @@
 
     <div class="box">
         <h2 style="color: darkblue;">Accessing Array Elements</h2><hr>
-        <h3 id="accessArray"></h3>
+        <h3 id="accessArray">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="AccessArray()">Access Array Elements</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Length of an Array</h2><hr>
-        <h3 id="lengthArray"></h3>
+        <h3 id="lengthArray">Original Array : Apple,Banana,Cherry,Mango,Orange,Pineapple</h3>
         <button onclick="LengthArray()">Length</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Array toString()</h2><hr>
-        <h3 id="arrayToString"></h3>
+        <h3 id="arrayToString">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="ArrayToString()"> toString()</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Array at()</h2><hr>
-        <h3 id="arrayAt"></h3>
+        <h3 id="arrayAt">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="ArrayAt()"> at()</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Array join()</h2><hr>
-        <h3 id="arrayJoin"></h3>
+        <h3 id="arrayJoin">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="ArrayJoin()"> join()</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Array pop()</h2><hr>
-        <h3 id="arrayPop"></h3>
+        <h3 id="arrayPop">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="ArrayPop()">pop()</button>
     </div>
 
     <div class="box">
         <h2 style="color: darkblue;">Array push()</h2><hr>
-        <h3 id="arrayPush"></h3>
+        <h3 id="arrayPush">Original Array : Apple,Banana,Cherry,Mango</h3>
         <button onclick="ArrayPush()">push()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array shift()</h2><hr>
+        <h3 id="arrayShift">Original Array : Apple,Banana,Cherry,Mango</h3>
+        <button onclick="ArrayShift()">shift()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array unshift()</h2><hr>
+        <h3 id="arrayUnshift">Original Array : Apple,Banana,Cherry,Mango</h3>
+        <button onclick="ArrayUnshift()">unshift()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array concat()</h2><hr>
+        <h3 id="arrayConcat"></h3>
+        <button onclick="ArrayConcat()">concat()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array splice()</h2><hr>
+        <h3 id="arraySplice">Original Array : Apple,Banana,Cherry,Mango</h3>
+        <button onclick="ArraySplice()">splice()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Array slice()</h2><hr>
+        <h3 id="arraySlice">Original Array : Apple,Banana,Cherry,Mango,Orange,Pineapple</h3>
+        <button onclick="ArraySlice()">slice()</button>
     </div>
 
     <script>
@@ -129,6 +159,54 @@
             let newFruit=prompt("Enter a fruit to add to the array:");
             fruits.push(newFruit);
             document.getElementById('arrayPush').innerHTML="Array after push(): "+fruits;
+        }
+
+        /*Array shift()
+        shift() method array-oda first element-a remove pannum and remaining ellam left side-ku shift aagum */
+        function ArrayShift(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let removed=fruits.shift();
+            document.getElementById('arrayShift').innerHTML="Removed Element: "+removed+"<br><br>Array after shift(): "+fruits;
+        }
+
+        /*Array unshift()
+        unshift() method array-oda beginning-la new element add pannum ..already irundha elements ellam right side-ku shift aagum. */
+        function ArrayUnshift(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let newFruit=prompt("Enter a fruit to add to the beginning of the array:");
+            fruits.unshift(newFruit);
+            document.getElementById('arrayUnshift').innerHTML="Array after unshift(): "+fruits;
+        }
+
+        /*Array concat()
+        The concat() method creates a new array by merging (concatenating) existing arrays*/
+        function ArrayConcat(){
+            let fruits=new Array('Apple','Banana');
+            let vegetables=new Array('carrot','Tomato');
+            let non_vegetables=new Array('Chicken','Fish');
+            let food=fruits.concat(vegetables,non_vegetables);
+            document.getElementById('arrayConcat').innerHTML="Fruits: "+fruits+"<br>Vegetables: "+vegetables+"<br>Non-Vegetables: "+non_vegetables+"<br><br>Food Array after concat(): "+food;
+        }
+
+        /*Array splice()
+        The splice() method adds/removes items to/from an array, and returns the removed items.*/
+        function ArraySplice(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango');
+            let index=Number(prompt("Enter the index to start splicing (0 to 3): "));
+            let num=Number(prompt("Enter the number of elements to remove: "));
+            let newFruit=prompt("Enter a fruit to add at index "+index+": ");
+            let removed=fruits.splice(index,num,newFruit);
+            document.getElementById('arraySplice').innerHTML="Array after splice(): "+fruits+"<br><br>Removed Elements: "+removed;
+        }
+
+        /*Array slice()
+        The slice() method returns selected elements in an array, as a new array object.*/
+        function ArraySlice(){
+            let fruits=new Array('Apple','Banana','Cherry','Mango','Orange','Pineapple');
+            let start=Number(prompt("Enter the start index for slice (0 to 5): "));
+            let end=Number(prompt("Enter the end index for slice (1 to 6): "));
+            let sliced=fruits.slice(start,end);
+            document.getElementById('arraySlice').innerHTML="Original Array: "+fruits+"<br><br>Sliced Array (from index "+start+" to "+end+"): "+sliced;
         }
 
     </script>
