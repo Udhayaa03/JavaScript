@@ -93,6 +93,24 @@
         <button onclick="ArraySlice()">slice()</button>
     </div>
 
+    <div class="box">
+        <h2 style="color: darkblue;">Sorting an Array</h2><hr>
+        <h3 id="arrysort">Original Array : Cherry,Mango,Kiwi,Apple,PineApple,Banana</h3>
+        <button onclick="ArraySort()">sort()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Reversing an Array</h2><hr>
+        <h3 id="arrayReverse">Original Array : Apple,Banana,Cherry,Mango</h3>
+        <button onclick="ArrayReverse()">reverse()</button>
+    </div>
+
+    <div class="box">
+        <h2 style="color: darkblue;">Compare Function</h2><hr>
+        <h3 id="compareFunction">Original Array : 40,100,1,5,25,10</h3>
+        <button onclick="CompareFunction()">compareNumbers()</button>
+    </div>
+
     <script>
         // creating an Array
         function CreateArray(){
@@ -208,6 +226,37 @@
             let sliced=fruits.slice(start,end);
             document.getElementById('arraySlice').innerHTML="Original Array: "+fruits+"<br><br>Sliced Array (from index "+start+" to "+end+"): "+sliced;
         }
+
+        /*Sorting an Array
+        The sort() method sorts an array alphabetically*/
+        function ArraySort(){
+            let fruits=new Array('Cherry','Mango','Kiwi','Apple','PineApple','Banana');
+            fruits.sort();
+            document.getElementById('arrysort').innerHTML="Sorted Array: "+fruits;
+        }
+
+        /*Reversing an Array
+        The reverse() method reverses the order of the elements in an array*/
+        function ArrayReverse(){
+            let fruits= ['Apple','Banana','Cherry','Mango'];
+            fruits.reverse();
+            document.getElementById('arrayReverse').innerHTML="Reversed Array: "+fruits;
+        }
+
+        /* Compare Function
+        If the result is negative, a is sorted before b.
+        If the result is positive, b is sorted before a.
+        If the result is 0, no changes are done with the sort order of the two values. */
+
+        function CompareFunction(){
+        let numbers=[40,100,1,5,25,10];
+        numbers.sort(compareNumbers);
+        function compareNumbers(a,b){
+            return a-b;
+        }
+        document.getElementById('compareFunction').innerHTML="Sorted Array using compare function: "+numbers;
+        }
+        
 
     </script>
 
