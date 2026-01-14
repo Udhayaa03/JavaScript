@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sets</title>
+</head>
+<body>
+    <!-- Set is a collection of unique values -->
+    <h1>Sets</h1>
+    <div class="container">
+
+        <div class="box">
+            <h2 style="color: darkblue;">Creating a Set</h2><hr>
+            <h3 id='createSet'>new Set([1, 2, 3, 4, 5, 5, 6])</h3>
+            <button onclick="CreateSet()">Create Set</button>
+        </div>
+
+        <!-- <div class="box">
+            <h2 style="color: darkblue;">add() Method</h2><hr>
+            <h3 id='addMethod'>set.add(value)</h3>
+            <button onclick="addMethod()">Add Value to Set</button>
+        </div> -->
+
+        <div class="box">
+            <h2 style="color: darkblue;">size Property</h2><hr>
+            <h3 id='sizeProperty'>new Set([1, 2, 3, 4, 5])</h3>
+            <button onclick="sizeProperty()">Get Set Size</button>
+            </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">has() Method</h2><hr>
+            <h3 id='hasMethod'>1,2,3,4,5</h3>
+            <button onclick="hasMethod()">Check if Value Exists in Set</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">values() Method</h2><hr>
+            <h3 id='valuesMethod'>new Set([1, 2, 3, 4, 5])</h3>
+            <button onclick="valuesMethod()">Get Set Values</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">keys() Method</h2><hr>
+            <h3 id='keysMethod'>new Set([1, 2, 3, 4, 5])</h3>
+            <button onclick="keysMethod()">Get Set Keys</button>    
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">entries() Method</h2><hr>
+            <h3 id='entriesMethod'>new Set([1, 2, 3, 4, 5])</h3>
+            <button onclick="entriesMethod()">Get Set Entries</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Set Logic</h2><hr>
+            <button onclick="setLogic()">set logics</button>
+        </div>
+
+
+
+        <script>
+            // new Set() Method
+            function CreateSet(){
+                let value= new Set([1, 2, 3, 4, 5, 5, 6]);
+                document.getElementById('createSet').innerHTML = `Set Values: ${[...value]}`;
+            }
+
+            // add() Method
+            // let mySet = new Set();
+            // function addMethod() {
+            //     let value = prompt("Enter a value");
+            //     mySet.add(value);
+            //     // console.log([...mySet]);
+            //     document.getElementById('addMethod').innerHTML = `Set Values: ${[...mySet]}`;
+            // }
+
+            // size Property
+            function sizeProperty() {
+                let mySet = new Set([1, 2, 3, 4, 5]);
+                document.getElementById('sizeProperty').innerHTML = "Set Size: " + mySet.size;
+            }
+
+            // has() Method
+            function hasMethod(){
+                let mySet=new Set([1,2,3,4,5]);
+                let value=prompt("Enter a value to check:");
+                let result=mySet.has(Number(value));
+                document.getElementById('hasMethod').innerHTML="Has " + value + ": " + result;
+            }
+
+            // values() Method
+            function valuesMethod(){
+                let mySet=new Set([1,2,3,4,5]);
+                let iterator=mySet.values(); //not an array ...it is an iterator
+                let valuesArray=[]; //to store values
+                for(let value of iterator){
+                    valuesArray.push(value);
+                }
+                document.getElementById('valuesMethod').innerHTML="Set Values: " + valuesArray;
+            }
+
+            // keys() Method
+            // keys() na, Set-kulla irukura values-ae keys-aa return pannum.
+            function keysMethod(){
+                let mySet=new Set([1,2,3,4,5]);
+                let iterator=mySet.keys();
+                let keysArray=[];
+                for(let key of iterator){
+                    keysArray.push(key);
+                }
+                document.getElementById('keysMethod').innerHTML="Set Keys: " + keysArray;
+            }
+
+            // entries() Method
+            // entries() na, Set-kulla irukura value-oda pair-aa return pannum [value, value]
+            function entriesMethod(){
+                let mySet=new Set([1,2,3,4,5]);
+                let iterator=mySet.entries();
+                let entriesArray=[];
+                for(let entry of iterator){
+                    entriesArray.push(entry);
+                }
+                document.getElementById('entriesMethod').innerHTML=`Set Entries: ${entriesArray}`;
+            }
+
+            // Set Logic
+            function setLogic(){
+                window.location.hrehf="SetLogic.html";
+            }
+            
+
+        </script>
+    </div>
+</body>
+</html>
