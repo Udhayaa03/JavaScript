@@ -53,11 +53,69 @@
             <button onclick="entriesMethod()">Get Set Entries</button>
         </div>
 
-        <!-- <div class="box">
-            <h2 style="color: darkblue;">Set Logic</h2><hr>
-            <button onclick="setLogic()">set logics</button>
-        </div> -->
+        
+    </div>
+    <br><br>
+    
+    <h1>Set Logic</h1>
 
+    <div class="container">
+
+        <div class="box">
+            <h2 style="color: darkblue;">Union of Sets</h2><hr>
+            <img src="images/union.jpg" alt="union" height="100px">
+            <h3 id='unionSet'>A = {1, 2, 3}, B = {3, 4, 5}</h3>
+            <button onclick="unionSet()">Get Union</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Intersection of Sets</h2><hr>
+            <img src="images/intersection.jpg" alt="intersection" height="100px">
+            <h3 id='intersectionSet'>A = {1, 2, 3, 4, 5}, B = {3, 4, 5, 6, 7}</h3>
+            <button onclick="intersectionSet()">Get Intersection</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Difference of Sets</h2><hr>
+            <img src="images/difference.jpg" alt="difference" height="100px">
+            <h3 id='differenceSet'> A = {1, 2, 3, 4, 5}, B = {3, 4, 5, 6, 7}</h3>
+            <button onclick="differenceSet()">Get Difference (A - B)</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Symmetric Difference</h2><hr>
+            <img src="images/symmetricDifference.jpg" alt="symmetricDifference" height="100px">
+            <h3 id="symmetricDiff">A = {1, 2, 3, 4, 5}, B = {3, 4, 5, 6, 7}</h3>
+            <button onclick="symmetricDiff()">Symmetric Difference</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">isSubsetOf() Method</h2><hr>
+            <img src="images/subset.jpg" alt="isSubsetOf" height="100px">
+            <h3 id="subsetof">B = {1, 2, 3, 4, 5}, A = {3, 4, 5,}</h3>
+            <button onclick="Subsetof1()">A.isSubsetof(B)</button>
+            <button onclick="Subsetof()">B.isSubsetof(A)</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">isSupersetOf() Method</h2><hr>
+            <img src="images/superset.jpg" alt="isSupersetOf" height="100px">
+            <h3 id="SupersetOf">A = {1, 2, 3, 4, 5}, B = {3, 4, 5,}</h3>
+            <button onclick="SupersetOf()"> A.isSupersetof(B)</button>
+            <button onclick="SupersetOf1()"> B.isSupersetof(A)</button>
+            
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">isDisjointFrom() Method</h2><hr>
+            <img src="images/disjointFrom.jpg" alt="isisDisjointFrom" height="100px">
+            <h3 id="Disjoint">A = {1, 2, 3}, B = { 4, 5, 6}</h3>
+            <button onclick="Disjoint()"> A.isDisjointFrom(B)</button>
+            
+            
+        </div>
+
+    </div>
 
 
         <script>
@@ -125,14 +183,83 @@
                 document.getElementById('entriesMethod').innerHTML=`Set Entries: ${entriesArray}`;
             }
 
-            // Set Logic
-            // function setLogic(){
-            //     window.location.hrehf="SetLogic.html";
-            // }
+              // union
+        function unionSet(){
+            let A=new Set([1,2,3]);
+            let B=new Set([3,4,5]);
+            let C= new Set([...A,...B]);
+            document.getElementById('unionSet').innerHTML="Union: "+[...C];
+        }
+
+        // intersection
+        function intersectionSet(){
+            let A=new Set([1,2,3,4,5]);
+            let B=new Set([3,4,5,6,7]);
+            let C= new Set(([...A]).filter(x=>B.has(x)));
+            document.getElementById('intersectionSet').innerHTML="Intersection :"+[...C];
+
+        }
+
+        // difference
+        function differenceSet(){
+            let A=new Set([1,2,3,4,5]);
+            let B=new Set([3,4,5,6,7]);
+            let C= new Set(([...A]).filter(x=>!B.has(x)));
+            document.getElementById('differenceSet').innerHTML="Difference :"+[...C];
+        }
+
+        // symmetric Difference
+        function symmetricDiff(){
+            let A= new Set([1,2,3,4,5]);
+            let B=new Set([3,4,5,6,7]);
+            let symDiff= new Set();
+            A.forEach(x=> {if(!B.has(x)) symDiff.add(x);});
+            B.forEach(x=>{ if (!A.has(x)) symDiff.add(x);});
+            document.getElementById('symmetricDiff').innerHTML=`Symmetric Difference : ${[...symDiff]}`;
+        }
+
+        //isSubsetOf() Method
+        function Subsetof(){
+            let B=new Set([1,2,3,4,5]);
+            let A=new Set([3,4,5]);
+            let C= B.isSubsetOf(A);
+            document.getElementById('subsetof').innerHTML=C;
+        }
+
+        function Subsetof1(){
+            let B=new Set([1,2,3,4,5]);
+            let A=new Set([3,4,5]);
+            let C= A.isSubsetOf(B);
+            document.getElementById('subsetof').innerHTML=C;
+        }
+
+        // isSupersetOf() Method
+        function SupersetOf(){
+            let A=new Set([1,2,3,4,5]);
+            let B=new Set([3,4,5]);
+            let C= A.isSupersetOf(B);
+            document.getElementById('SupersetOf').innerHTML=C;
+        }
+
+        function SupersetOf1(){
+            let A=new Set([1,2,3,4,5]);
+            let B=new Set([3,4,5]);
+            let C= B.isSupersetOf(A);
+            document.getElementById('SupersetOf').innerHTML=C;
+        }
+
+        //  isDisjointFrom() Method
+        function Disjoint(){
+            let A=new Set([1,2,3]);
+            let B=new Set([4,5,6]);
+            let C=A.isDisjointFrom(B);
+            document.getElementById('Disjoint').innerHTML=C;
+        }
+        
+
             
 
         </script>
-    </div>
+    
 </body>
-
 </html>
