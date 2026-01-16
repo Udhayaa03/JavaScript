@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Maps</title>
+</head>
+<body>
+    <!-- Map is an object that can store collections of key-value pairs, similar to a dictionary -->
+     <h1>Maps</h1>
+
+     <div class="container">
+
+        <div class="box">
+            <h2 style="color: darkblue;">Creating a Map</h2><hr>
+            <h3 id="createMap">Months</h3>
+            <button onclick="CreateMap()">Create</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">get() Method</h2><hr>
+            <h3 id="AddValues">Ex:Jan,Feb,.. Dec</h3>
+            <button onclick="AddValues()">get()</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">size Method</h2><hr>
+            <h3 id="size">Jan,Feb,.. Dec</h3>
+            <button onclick="MapSize()">Months.size</button>
+        </div>
+     
+        <div class="box">
+            <h2 style="color: darkblue;">delete() Method</h2><hr>
+            <h3 id="del">Jan,Feb,.. Dec</h3>
+            <button onclick="DelMethod()">Months.delete()</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">clear() Method</h2><hr>
+            <h3 id="clear">Jan,Feb,.. Dec</h3>
+            <button onclick="ClearMethod()">Months.clear()</button>
+        </div>
+
+
+
+        <script>
+            // Map Creation
+            function CreateMap(){
+                let months=new Map([['Jan',1], ['Feb',2],['Mar',3],['Apr',4,],['May',5],['Jun',6],['Jul',7],['Aug',8],['Sep',9],['Oct',10],['Nov',11],['Dec',12]]);
+                document.getElementById('createMap').innerHTML= `${[...months]}`;
+            }
+
+            // set()/get() Method
+            function AddValues(){
+                let Months=new Map([['Jan',1], ['Feb',2],['Mar',3],['Apr',4,],['May',5],['Jun',6],['Jul',7],['Aug',8],['Sep',9],['Oct',10],['Nov',11],['Dec',12]]);
+                // Months.set('Apr',4);
+                let value= prompt("Enter a Month:");
+                if (Months.has(value)){
+                     document.getElementById('AddValues').innerHTML=`${value} is the ${Months.get(value)} month of the year`;
+                }
+                
+                else {
+                    document.getElementById('AddValues').innerHTML=`Enter value like Jan,Feb..  `;
+                }
+            }
+
+
+            // size of Map
+            function MapSize(){
+                let Months=new Map([['Jan',1], ['Feb',2],['Mar',3],['Apr',4,],['May',5],['Jun',6],['Jul',7],['Aug',8],['Sep',9],['Oct',10],['Nov',11],['Dec',12]]);
+                let size=Months.size;
+                document.getElementById('size').innerHTML=`Size of the Map is ${size}`;
+
+            }
+
+            // delete() Method
+            // delete() method removes a map element
+            function DelMethod(){
+                let Months=new Map([['Jan',1], ['Feb',2],['Mar',3],['Apr',4,],['May',5],['Jun',6],['Jul',7],['Aug',8],['Sep',9],['Oct',10],['Nov',11],['Dec',12]]);
+                let value=prompt("Enter a Month to delete:")
+                if (Months.has(value)){
+                    Months.delete(value);
+                     document.getElementById('del').innerHTML=`${value} is deleted.<br>Months: ${[...Months]} `;
+                }
+                
+                else {
+                    document.getElementById('del').innerHTML=`Enter value like Jan,Feb..  `;
+                }
+
+            }
+
+            // clear() Method
+            function ClearMethod(){
+                let Months=new Map([['Jan',1], ['Feb',2],['Mar',3],['Apr',4,],['May',5],['Jun',6],['Jul',7],['Aug',8],['Sep',9],['Oct',10],['Nov',11],['Dec',12]]);
+                Months.clear();
+                document.getElementById('clear').innerHTML= `There is no data .the size is ${Months.size}`;
+            }
+        </script>
+    </div>
+</body>
+</html>
