@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Math</title>
+</head>
+<body>
+    <h1>Math Object</h1>
+
+    <div class="container">
+
+        <div class="box">
+            <h2 style="color: darkblue;">Math.PI</h2><hr>
+            <h3 id="pi">Value of Math Pi is</h3>
+            <button onclick="Pi()">Click</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Math.E</h2><hr>
+            <h3 id="euler">Euler's Number</h3>
+            <button onclick="Euler()">Click</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Square Root</h2><hr>
+            <h3 id="sqrt">Sq.Root of 2 is</h3>
+            <button onclick="SquareRoot()">Click</button>
+        </div>
+
+        <div class="box">
+            <h2 style="color: darkblue;">Square Root</h2><hr>
+            <h3 id="sqrt1/2">Square root of 1/2</h3>
+            <button onclick="sqrt1_2()">Click</button>
+        </div></div>
+
+<br><br>
+
+        <h1>Math Methods</h1>
+        <div class="container">
+            <div class="box">
+                <h2 style="color: darkblue;">Math.round(x)</h2><hr>
+                <h3 id="round">Returns x rounded to its nearest integer</h3>
+                <button onclick="Round()">round</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.ceil(x)</h2><hr>
+                <h3 id="ceil">Returns x rounded up to its nearest integer</h3>
+                <button onclick="Ceil()">ceil</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.floor(x)</h2><hr>
+                <h3 id="floor">Returns x rounded down to its nearest integer</h3>
+                <button onclick="Floor()">floor</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.trunc(x)</h2><hr>
+                <h3 id="trunc">Returns the integer part of x</h3>
+                <button onclick="Trunc()">trunc</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.sign(x)</h2><hr>
+                <h3 id="sign">If x is positive it returns 1<br>If x is negative it returns -1<br>If x is zero, it returns 0</h3>
+                <button onclick="Sign()">sign</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.pow(x,y)</h2><hr>
+                <h3 id="pow">Returns the value of x to the power of y</h3>
+                <button onclick="Pow()">pow</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.sqrt(x)</h2><hr>
+                <h3 id="sq_root">Returns the square root of x</h3>
+                <button onclick="Sqrt()">sqrt</button>
+            </div>
+
+            <div class="box">
+                <h2 style="color: darkblue;">Math.abs(x)</h2><hr>
+                <h3 id="abs">returns the absolute (positive) value of x</h3>
+                <button onclick="Abs()">absolute</button>
+            </div>
+
+            
+
+            
+        
+
+
+
+        <script>
+            function Pi(){
+                document.getElementById('pi').innerHTML=Math.PI;
+            }
+
+            function Euler(){
+                document.getElementById('euler').innerHTML=Math.E;
+            }
+
+            function SquareRoot(){
+                document.getElementById('sqrt').innerHTML=Math.SQRT2;
+            }
+
+            function sqrt1_2(){
+                document.getElementById('sqrt1/2').innerHTML=Math.SQRT1_2;
+            }
+
+
+            //  Math Methods
+            function Round(){
+                let val=Number(prompt("Enter a Decimal value:"));
+                document.getElementById('round').innerHTML= Math.round(val);
+            }
+
+            function Ceil(){
+                let val=Number(prompt("Enter a  value:"));
+                document.getElementById('ceil').innerHTML= Math.ceil(val);
+            }
+
+            function Floor(){
+                let val=Number(prompt("Enter a  value:"));
+                document.getElementById('floor').innerHTML= Math.floor(val);
+            }
+
+            function Trunc(){
+                let val=Number(prompt("Enter a  value:"));
+                document.getElementById('trunc').innerHTML= Math.trunc(val);
+            }
+
+            function Sign(){
+                let val=Number(prompt("Enter a  value:"));
+                document.getElementById('sign').innerHTML= Math.sign(val);
+            }
+
+            function Pow(){
+                let x=Number(prompt("Enter a  value of x:"));
+                let y=Number(prompt("Enter a  value of y:"));
+                document.getElementById('pow').innerHTML= Math.pow(x,y);
+            }
+
+            function Sqrt(){
+                let x=Number(prompt("Enter a  value :"));
+                document.getElementById('sq_root').innerHTML= `The Square Root of ${x} is ` +Math.sqrt(x);
+            }
+
+            function Abs(){
+                let x=Number(prompt("Enter a  value :"));
+                document.getElementById('abs').innerHTML=Math.abs(x);
+            }
+
+            
+
+
+        </script>
+
+
+
+
+    </div>
+</body>
+</html>
+
+
+
+<!------------------------------------------------------------------------ 
+
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E
+
+---------------------------------------------------------------------->
+
+
+
+<!----------------------------------------------------------------------------- 
+
+                        Number to Integer
+
+There are 4 common methods to round a number to an integer:
+
+Math.round(x)	Returns x rounded to its nearest integer
+Math.ceil(x)	Returns x rounded up to its nearest integer
+Math.floor(x)	Returns x rounded down to its nearest integer
+Math.trunc(x)	Returns the integer part of x
+
+
+
+Math.pow(x,y)  Returns the value of x to the power of y
+Math.sqrt(x)   Returns the square root of x
+Math.abs(x)    Returns the absolute (positive) value of x
+Math.min()     Returns the lowest value in a list of arguments
+Math.max()     Returns the Highest value in a list of arguments
+
+
+------------------------------------------------------------------------------>
