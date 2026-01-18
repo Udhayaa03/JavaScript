@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <>
         <div class="container">
    
         <div class="box">
@@ -95,14 +95,18 @@
         <div class="box">
         <!-- page aah full aah print poda porom -->
          <h3>Page Full aah print aagum 👇</h3>
-         <button onclick="window.print()">Print</button></div>
-        
+         <button onclick="window.print()">Print</button></div></div>
 
+         
+        <br><br><br>
+
+         <div class="container1">
 
         <div class="box"
-             style="border: 2px solid #c591e1;
-                    background-color: #c591e1;">
-        <h3>More +</h3>
+             style="border: 2px solid #010101;
+                    background-color: #9beb91;">
+        <h2 style="color: darkblue;">Basic JavaScripts</h2><hr>
+        <h3>Click the buttons to explore</h3>
         <button onclick="operator()">Operators</button>
         <button onclick="cond()">Conditional Statements</button>
         <button onclick="loop()">Loops</button>
@@ -118,8 +122,19 @@
         <button onclick="math()">Math</button>
        
         </div></div>
-    
 
+
+        <br><br><br>
+        <div class="container1">
+            <div class="box"style="border: 2px solid #010101; background-color: #deeb91;">
+                <h2 style="color: darkblue;">HTML DOM</h2><hr>
+                <h3>Click the button to explore</h3>
+
+                <button onclick="DOM()">HTML DOM</button>
+            </div>
+        
+    
+        </div>
     <script>
         function operator(){
             window.location.href='Operators.html';
@@ -171,6 +186,10 @@
         
         function math(){
             window.location.href='Math.html';
+        }
+
+        function DOM(){
+            window.location.href='DOM.html'
         }
     </script>
 
