@@ -26,12 +26,29 @@
             <button onclick="TagName()">TagName</button>
         </div>
 
-        <!-- <div class="box">
+        <div class="box">
             <h2>getElementsByClassName()</h2><hr>
             <h3 class="sample">Class</h3>
+            <h3 class="sample">Hello</h3>
             <button onclick="Class()">ClassName</button>
-        </div> -->
+        </div>
     
+        <div class="box">
+            <h2>querySelector() method</h2><hr>
+            <h3 class="classVal">Class</h3>
+            <h3 id="sample1">ID</h3>
+            <h4>Tag</h4>
+            <button onclick="Query()">QuerySelector</button>
+        </div>
+
+        <div class="box">
+            <h2>querySelectorAll() method</h2><hr>
+            <p class="query">Hello World !</p>
+            <p class="query">Hello World1 !</p>
+            <p class="query1">Diff One</p>
+            <h3 id="query1"></h3>
+            <button onclick="QueryAll()">QuerySelectorAll</button>
+        </div>
 
 
 
@@ -46,15 +63,44 @@
             // getElementsByTagName()
             function TagName(){
                 let tags=document.getElementsByTagName("p");
-                let value=Number(prompt("Enetr a value 1-3"));
+                let value=Number(prompt("Enter a value 1-3"));
                 document.getElementById('sample').innerHTML=tags[value].innerHTML; //show  "hello" cuz, first <p> i.e the above one with value hello
             }
 
-            // // getElementsByClassName()
-            // function Class(){
-            //     let value=prompt("enter a value to display");
-            //     document.getElementsByClassName('sample').innerHTML=value;
-            // }
+            // getElementsByClassName()
+            function Class(){
+                let value= document.getElementsByClassName('sample');
+                for(let i=0;i<value.length;i++){
+                value[i].style.color="red";
+                }
+            }
+
+            //  querySelector() Method
+            // selects first occurence only
+            function Query(){
+                let value=document.querySelector('#sample1'); //For ID use '#'
+                value.style.background="yellow";
+
+                let classValue=document.querySelector('.classVal'); //for ClassName use '.'
+                classValue.style.background="red";
+
+                let tagValue=document.querySelector("h4");
+                tagValue.style.background="red"
+            }
+
+
+            // querySelectorAll() Method
+            function QueryAll(){
+                let value=document.querySelectorAll('p.query'); 
+                let text="";
+
+                value.forEach(function(item){
+                    text+= item.innerHTML+"<br>";
+                })
+                document.getElementById("query1").innerHTML= "Working..."+ text;
+            }
+
+
         </script>
   </div>  
 </body>
