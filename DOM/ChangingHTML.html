@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Changing HTML Elements</title>
+</head>
+<body>
+    <h1>CHANGING HTML ELEMENTS</h1><br>
+
+    <div class="container">
+        <div class="box">
+            <h2>Changing HTML Content</h2><hr>
+            <h3 id="a">Hello Familys aee !!</h3>
+            <button onclick="content()">Change</button><br>
+        </div>
+
+        <div class="box">
+            <h2>Changing an Attribute</h2><hr>
+            <img id="image" src="../images/day.jpg" alt="Day" height="200px"><br>
+            <button onclick="attribute()">Night</button>
+            <button onclick="attribute1()">Day</button><br>
+        </div>
+
+        <div class="box">
+            <h2>Dynamic HTML Content</h2><hr>
+            <h3 id="dynamic">Displays dynamic date when the button is click</h3>
+            <button onclick="Dynamic()">Date</button>
+        </div>
+
+
+
+
+        <script>
+            function content(){
+                let value=prompt("Enter a value to display:");
+                document.getElementById("a").innerHTML= value; //innerHTML property can be used to get or change any HTML element, including <html> and <body>            
+            }
+
+            function attribute(){
+                // document.getElementById(id).attribute = new value       👈syntax
+                document.getElementById("image").src="../images/night.jpg"  //Changes the value of the src attribute 
+            }
+
+            function attribute1(){
+                document.getElementById("image").src="../images/day.jpg"        
+            }
+
+            function Dynamic(){
+                document.getElementById("dynamic").innerHTML=Date();      
+            }
+        </script>
+
+        
+    </div>
+     <footer align="center"; style="background-color:burlywood";><a href="DOM.html"><br>Back</a><br><br></footer>
+    
+</body>
+</html>
