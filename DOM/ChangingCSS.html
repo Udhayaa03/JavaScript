@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Changing CSS</title>
+</head>
+<body>
+    <h1>CHANGING CSS</h1>
+
+    <!-- To change the style of an HTML element, use this syntax:
+        document.getElementById(id).style.property= new style -->
+    
+    <div class="container">
+        <div class="box">
+            <h2>Changing HTML Style(Color)</h2><hr>
+            <h3 id="color">Thambi Keela Erangu Pa !!</h3>
+            <button onclick="Color()">change color</button>
+        </div>
+
+        <div class="box">
+            <h2>Visibility</h2><hr>
+            <img id="hide" src="../images/hide.jpg" alt="Hide" height="200px"><br>
+            <button onclick="Hide()">hide</button>
+            <button onclick="Show()">show</button>
+
+        </div>
+
+
+
+        <script>
+            function Color(){
+                document.getElementById("color").style.color="green";
+            }
+
+            function Hide(){
+                document.getElementById("hide").style.visibility="hidden";
+            }
+
+            function Show(){
+                document.getElementById("hide").style.visibility="visible";
+            }
+        </script>
+    </div>
+</body>
+</html>
