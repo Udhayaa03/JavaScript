@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Functions</title>
+</head>
+<body>
+    <h1 style="color:brown; text-align: center;">JavaScript Functions</h1>
+    
+    <div class="container">
+
+        <!-- Function without parameters  -->
+    <div class="box">
+    <h2 style="color: darkblue;">Function without Parameters</h2><hr>
+    <h3 id="greet"></h3>
+    <button onclick="Greet()">Greet</button>
+    </div>
+
+    <!-- Function with parameters  -->
+    <div class="box">
+    <h2 style="color: darkblue;">Function with Parameters</h2><hr>
+    <h3 id="greet2"></h3>
+    <button onclick="Greet2('User')">Greet</button>
+    </div>
+
+    <!-- Function Expression -->
+    <div class="box">
+    <h2 style="color: darkblue;">Function Expression</h2><hr>
+    <h3 id="exp"></h3>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+    </div>
+
+    <!-- Arrow Function -->
+    <div class="box">
+    <h2 style="color: darkblue;">Arrow Function</h2><hr>
+    <h3 id="arrow"></h3>
+    <button onclick="arrowAdd()">Add</button>
+    <button onclick="arrowSub()">Subtract</button>
+    <button onclick="arrowMul()">Multiply</button>
+    <button onclick="arrowDiv()">Divide</button>
+    </div>
+
+    <!-- Before arrow function
+     <div class="box">
+    <h2 style="color: darkblue;">Before Arrow Function</h2><hr>
+    <h3 id="arrowbefore"></h3>
+    <button onclick="
+        const x=function(num1,num2){
+            return num1+num2;
+        }
+        let num1=Number(prompt('First number enter pannu'));
+        let num2=Number(prompt('Second number enter pannu'));
+        document.getElementById('arrowbefore').innerHTML='Sum is: ' + x(num1,num2);">Add</button>
+     </div> -->
+
+
+
+
+
+
+    <script>
+        
+        function Greet(){
+            let name=prompt("Un Name enna?");
+            document.getElementById('greet').innerHTML="Welcome, "+ name +" !";
+        }
+
+        function Greet2(name){
+            document.getElementById('greet2').innerHTML="Welcome, " + name + "!";
+        }
+
+        function add(){
+            const x= function(num1,num2) 
+            { 
+                return num1+num2;
+         }
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('exp').innerHTML="Sum is: " + x(num1,num2);
+        }
+
+        function sub(){
+            const x= function(num1,num2) { return num1-num2; }
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('exp').innerHTML="Difference is: " + x(num1,num2);
+        }
+
+        function mul(){
+            const x= function(num1,num2) { return num1*num2; }
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('exp').innerHTML="Product is: " + x(num1,num2);
+        }
+
+        function div(){
+            const x= function(num1,num2) { return num1/num2; }
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('exp').innerHTML="Quotient is: " + x(num1,num2);
+        }
+
+        function arrowAdd(){
+            const x=(num1,num2) => num1+num2;
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('arrow').innerHTML="Sum is: " + x(num1,num2);
+        }
+
+        function arrowSub(){
+            const x=(num1,num2) => num1-num2;
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('arrow').innerHTML="Difference is: " + x(num1,num2);
+        }
+
+        function arrowMul(){
+            const x=(num1,num2) => num1*num2;
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('arrow').innerHTML="Product is: " + x(num1,num2);
+        }
+
+        function arrowDiv(){
+            const x=(num1,num2) => num1/num2;
+            let num1=Number(prompt("First number enter pannu"));
+            let num2=Number(prompt("Second number enter pannu"));
+            document.getElementById('arrow').innerHTML="Quotient is: " + x(num1,num2);
+        }
+
+    </script>
+
+
+
+</div>
+</body>
+</html>
