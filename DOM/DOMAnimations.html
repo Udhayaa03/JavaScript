@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <title>DOM Animations</title>
+
+    <style>
+        #container {
+            height: 500px;
+            width: 500px;
+            position: relative;
+            background-color: yellow;
+        }
+
+        #animate {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red; text-align: center;">DOM ANIMATIONS</h1><br>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <br><button onclick="Animate()">Animate</button>
+
+    <script>
+        function Animate() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos =0;  //tracks the current position (in pixels)
+            clearInterval(id);
+            id = setInterval(frame, 5); // Calls the frame() function every 5 milliseconds
+            function frame() {
+                if (pos == 450) {
+                    clearInterval(id);
+                } 
+                else { 
+                    pos++;  // Increase position by 1 pixel each time
+                    elem.style.left = pos + "px";
+                    elem.style.top = pos + "px";
+                }
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
+
