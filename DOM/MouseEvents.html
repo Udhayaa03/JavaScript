@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title> MouseEvents</title>
+</head>
+
+<body>
+    <h1>MOUSE EVENTS</h1>
+
+    <div class="container">
+
+        <!-- Mouseover and mouseOut -->
+    <div class="box" >
+        <h2>MouseOver and MouseOut</h2><hr>
+        <h3 id="box1">Move Mouse over this box</h3>
+    </div>
+
+    <!-- click and doubleclick -->
+     <div class="box">
+        <h2>Onclick and dblclick</h2><hr>
+        <h3 id="box2">Click the button to change the text</h3>
+        <button onclick="Click()">click</button>
+        <button ondblclick="DoubleClick()">doubleclick</button>
+     </div>
+
+
+
+    <script>
+        let box = document.getElementById("box1");
+        box.addEventListener("mouseover", function() {
+            box.innerHTML = "Mouse is Over Me !"
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.innerHTML = "Mouse is out !"
+        });
+
+
+        function Click(){
+            document.getElementById("box2").innerHTML="Clicked !!";
+        }
+
+        function DoubleClick(){
+            document.getElementById("box2").innerHTML=" Double Clicked !!";
+        }
+
+
+    </script>
+
+    </div>
+</body>
+
+</html>
